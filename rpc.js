@@ -66,11 +66,11 @@ function roundOne(playerSelection,computerSelection)
         }
      
      if (playerScore > computerScore)
-     { return " you won the game"}
+     { console.log(" you won the game")}
      else if(playerScore < computerScore)
-     {return "you lost the game"}
+     {console.logt("you lost the game")}
      else if (playerScore === computerScore)
-     {return "you tied the game"}
+     {console.log( "you tied the game")}
      }
      
 
