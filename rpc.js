@@ -75,23 +75,7 @@ container.append('outcome');
      
 
 
-     function game()
-     {
-        for (let i = 0; i < 3; i++)
-        {
-            const playerSelection = prompt("Enter rock, paper or scissors");
-            const copmuterSelection = computerPlay();
-            console.log(copmuterSelection,playerSelection)
-            console.log(roundOne(playerSelection,copmuterSelection));
-        }
-     
-     if (playerScore > computerScore)
-     { console.log(" you won the game")}
-     else if(playerScore < computerScore)
-     {console.log("you lost the game")}
-     else if (playerScore === computerScore)
-     {console.log( "you tied the game")}
-     }
+    
    
 
 rockButton.addEventListener("click" ,function()
