@@ -1,6 +1,10 @@
 
 let playerScore =0;
+
 let computerScore =0;
+
+
+
 const rockButton = document.querySelector('.rock');
 const paperButton =document.querySelector('.paper');
 const scissorButton = document.querySelector('.scissors');
@@ -9,6 +13,8 @@ const container =document.querySelector('.container');
 const outcomediv =document.querySelector('.outcome');
 const cscorespan =document.querySelector('computer-score');
 const pscorespan =document.querySelector('player-score');
+const playerScore1 = document.querySelector('.player-score')
+const computerScore1= document.querySelector('.computer-score')
 
 
 
@@ -49,6 +55,7 @@ function roundOne(playerSelection,computerSelection)
 
      {
         playerScore++;
+        playerScore1.textContent = 'PLAYER SCORE ' + playerScore;
         const p =document.createElement('p');
         p.innerText= "pLAYER WON"
         outcomediv.appendChild(p);
@@ -64,11 +71,14 @@ function roundOne(playerSelection,computerSelection)
      (playerSelection === "scissors" && computerSelection==="rock"))
      {
         computerScore++;
+        computerScore1.textContent ='COMPUTER SCORE ' + computerScore;
         const p =document.createElement('p');
         p.innerText= "COMPUTER WON";
         outcomediv.appendChild(p);
        
      }
+
+    
    }
      
      function score(playerScore, computerScore)
@@ -108,9 +118,9 @@ rockButton.addEventListener("click" ,()=>
       const playerSelection ='paper';
       roundOne(playerSelection, computerSelection)
     
-      
+  
       score(playerScore, computerScore)
-      scoreboard(playerScore,computerScore)
+      
 
   
      })
@@ -122,7 +132,7 @@ rockButton.addEventListener("click" ,()=>
       const playerSelection ='scissors';
       roundOne(playerSelection, computerSelection)
 
-      
+   
       score(playerScore, computerScore)
 
    }
