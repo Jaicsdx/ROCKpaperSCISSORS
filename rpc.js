@@ -7,6 +7,8 @@ const scissorButton = document.querySelector('.scissors');
 const container =document.querySelector('.container');
 
 const outcomediv =document.querySelector('.outcome');
+const cscorespan =document.querySelector('computer-score');
+const pscorespan =document.querySelector('player-score');
 
 
 
@@ -48,7 +50,7 @@ function roundOne(playerSelection,computerSelection)
      {
         playerScore++;
         const p =document.createElement('p');
-        p.innerText= "COMPUTER WON"
+        p.innerText= "pLAYER WON"
         outcomediv.appendChild(p);
    
         }
@@ -56,24 +58,36 @@ function roundOne(playerSelection,computerSelection)
 
      
          
-     else 
+     else if
      ((playerSelection === "rock" && computerSelection==="paper") ||
      (playerSelection === "paper" && computerSelection==="scissors")||
      (playerSelection === "scissors" && computerSelection==="rock"))
      {
         computerScore++;
         const p =document.createElement('p');
-        p.innerText= "PLAYER WON";
+        p.innerText= "COMPUTER WON";
         outcomediv.appendChild(p);
        
      }
    }
      
-     
-     
+     function score(playerScore, computerScore)
+     {
+     if (playerScore===5)
+     {
+      const h2 =document.createElement('h2');
+      h2.innerText ="PLAYER WON "
+      outcomediv.appendChild(h2)
+     }
+else if (computerScore===5)
+{const h2 = document.createElement('h2')
+h2.innerText ="COMPUTER WON"
+outcomediv.appendChild(h2)}
+   }
+   
+   
 
 
-    
    
 
 rockButton.addEventListener("click" ,()=>
@@ -82,18 +96,38 @@ rockButton.addEventListener("click" ,()=>
       const computerSelection =computerPlay();
       const playerSelection ='rock';
       roundOne(playerSelection, computerSelection)
+    
+      
+      score(playerScore, computerScore)
+  
+
    })
    paperButton.addEventListener("click" ,()=>
 
      {const computerSelection =computerPlay();
       const playerSelection ='paper';
-      roundOne(playerSelection, computerSelection)})
-   
+      roundOne(playerSelection, computerSelection)
+    
+      
+      score(playerScore, computerScore)
+      scoreboard(playerScore,computerScore)
+
+  
+     })
    scissorButton.addEventListener("click" ,()=>
 
-      {const computerSelection =computerPlay();
+      {
+      
+         const computerSelection =computerPlay();
       const playerSelection ='scissors';
-      roundOne(playerSelection, computerSelection)})
+      roundOne(playerSelection, computerSelection)
+
+      
+      score(playerScore, computerScore)
+
+   }
    
+   )
+
    
-   
+ 
