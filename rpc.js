@@ -4,7 +4,7 @@ let computerScore =0;
 const rockButton = document.querySelector('.rock');
 const paperButton =document.querySelector('.paper');
 const scissorButton = document.querySelector('.scissors');
-const container =document.querySelector('.container);')
+const container =document.querySelector('.container');
 
 const outcomediv =document.querySelector('.outcome');
 
@@ -33,7 +33,7 @@ function roundOne(playerSelection,computerSelection)
     if 
         (playerSelection === computerSelection)
         { const p =document.createElement('p');
-        p.innerText= "you tied"
+        p.innerText= "GAME TIED"
         outcomediv.appendChild(p);
    
         }
@@ -48,7 +48,7 @@ function roundOne(playerSelection,computerSelection)
      {
         playerScore++;
         const p =document.createElement('p');
-        p.innerText= "you won"
+        p.innerText= "COMPUTER WON"
         outcomediv.appendChild(p);
    
         }
@@ -63,11 +63,11 @@ function roundOne(playerSelection,computerSelection)
      {
         computerScore++;
         const p =document.createElement('p');
-        p.innerText= "COMPUTER WON";
+        p.innerText= "PLAYER WON";
         outcomediv.appendChild(p);
        
      }
-     
+   }
      
      
      
@@ -76,21 +76,24 @@ function roundOne(playerSelection,computerSelection)
     
    
 
-rockButton.addEventListener("click" ,function()
+rockButton.addEventListener("click" ,()=>
 
    {
       const computerSelection =computerPlay();
       const playerSelection ='rock';
       roundOne(playerSelection, computerSelection)
    })
-   paperButton.addEventListener("click" ,function()
+   paperButton.addEventListener("click" ,()=>
 
      {const computerSelection =computerPlay();
       const playerSelection ='paper';
       roundOne(playerSelection, computerSelection)})
    
-   scissorButton.addEventListener("click" ,function()
+   scissorButton.addEventListener("click" ,()=>
 
       {const computerSelection =computerPlay();
       const playerSelection ='scissors';
-      roundOne(playerSelection, computerSelection)})}
+      roundOne(playerSelection, computerSelection)})
+   
+   
+   
