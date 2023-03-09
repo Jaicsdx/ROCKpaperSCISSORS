@@ -1,6 +1,15 @@
 
 let playerScore =0;
 let computerScore =0;
+const rockButton = document.querySelector('.rock');
+const paperButton =document.querySelector('.paper');
+const scissorButton = document.querySelector('.scissors');
+const container =document.querySelector('.container');
+const outcomediv =document.querySelector('.outcome');
+
+
+
+
 
 function computerPlay()
 {
@@ -18,12 +27,17 @@ const voucher = ["rock", "paper", "scissors"];
 
 
 function roundOne(playerSelection,computerSelection)
+const outcomeDiv =document.createElement('div')
+outcomediv.classList.add('outcome')
+container.append('outcome');
 
 {
     if 
         (playerSelection === computerSelection)
-        {
-            return "tie";
+        { const p =document.createElement('p');
+        p.innerText= "you tied"
+        outcomediv.appendChild(p);
+   
         }
     
    
@@ -35,10 +49,14 @@ function roundOne(playerSelection,computerSelection)
 
      {
         playerScore++;
-        return "you won";
+        const p =document.createElement('p');
+        p.innerText= "you won"
+        outcomediv.appendChild(p);
+   
+        }
         
 
-     }
+     
          
      else 
      ((playerSelection === "rock" && computerSelection==="paper") ||
@@ -46,12 +64,14 @@ function roundOne(playerSelection,computerSelection)
      (playerSelection === "scissors" && computerSelection==="rock"))
      {
         computerScore++;
-        return "computer won";
+        const p =document.createElement('p');
+        p.innerText= "COMPUTER WON";
+        outcomediv.appendChild(p);
        
      }
      
      
-     }
+     
      
 
 
@@ -72,6 +92,23 @@ function roundOne(playerSelection,computerSelection)
      else if (playerScore === computerScore)
      {console.log( "you tied the game")}
      }
-     
+   
 
-     console.log(game());
+rockButton.addEventListener("click" ,function()
+
+   {
+      const computerSelection =computerPlay();
+      const playerSelection ='rock';
+      roundOne(playerSelection, computerSelection)
+   })
+   paperButton.addEventListener("click" ,function()
+
+     {const computerSelection =computerPlay();
+      const playerSelection ='paper';
+      roundOne(playerSelection, computerSelection)})
+   
+   scissorButton.addEventListener("click" ,function()
+
+      {const computerSelection =computerPlay();
+      const playerSelection ='scissors';
+      roundOne(playerSelection, computerSelection)})}
