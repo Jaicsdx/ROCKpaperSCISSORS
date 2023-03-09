@@ -4,9 +4,9 @@ let computerScore =0;
 const rockButton = document.querySelector('.rock');
 const paperButton =document.querySelector('.paper');
 const scissorButton = document.querySelector('.scissors');
-const container =document.querySelector('.container');
-const outcomediv =document.querySelector('.outcome');
+const container =document.querySelector('.container);')
 
+const outcomediv =document.querySelector('.outcome');
 
 
 
@@ -27,9 +27,7 @@ const voucher = ["rock", "paper", "scissors"];
 
 
 function roundOne(playerSelection,computerSelection)
-const outcomeDiv =document.createElement('div')
-outcomediv.classList.add('outcome')
-container.append('outcome');
+
 
 {
     if 
