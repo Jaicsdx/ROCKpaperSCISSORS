@@ -1,5 +1,5 @@
 # ROCKpaperSCISSORS
-
+![demopic](./assets/Screenshot%202023-08-19%20at%2012.36.28%20PM.png)
 
 [live demo](https://jaicsdx.github.io/ROCKpaperSCISSORS/)
 
