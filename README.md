@@ -1,4 +1,5 @@
 # ROCKpaperSCISSORS
+[live demo](https://jaicsdx.github.io/ROCKpaperSCISSORS/)
 Welcome to the Rock Paper Scissors project! This is a fun game that you can play against the computer. The game is built using HTML, CSS, and JavaScript, and is designed to be easy to play and visually appealing.
 
 Headline:
