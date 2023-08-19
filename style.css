@@ -3,27 +3,33 @@ body{
 font-family: 'Bricolage Grotesque', sans-serif;
 font-family: 'Fira Sans', sans-serif;
 font-family: 'Roboto Mono', monospace;
-width: 100 vh;
-height: 100 vh;
+width: 50 vh;
+height: 50 vh;
 overflow: hidden;
-display: flex;
-flex-direction: ;
+
+
 
 background-image: url(./assets/hands-playing-rock-paper-scissors-game-flat-design-style-vector-illustration_540284-598.avif);
 background-repeat: no-repeat;
 background-size: cover;
 background-blend-mode: saturation;
 }
-.image{
+.outContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.outcome{
     display:flex;
     width: 39rem;
     height: 60rem;
     margin: 1% 1% 1% 1%;
-    background: url(assets/Screenshot\ 2023-08-18\ at\ 5.11.33\ PM.png);
-    background-size:cover;
-    align-content: center;
-    justify-content: center;
+ display: inline;
+ justify-content: center;
     border: 1px solid white;
+    font-weight: 900;
+    font-size: 20px;
+    display: block;
 }
 .image-description{
     margin-top: auto;
@@ -57,10 +63,13 @@ text-decoration: inherit;}
     transform: translateY(-3.4rem);
 
 }
-.form-input{
+.livescore{
+
+
+ 
     border: 2px solid gray;
     color: #333;
-    font-size: 1.2 rem;
+    font-size: 40px;
     padding: 0.2rem 0.2rem;
     border-radius: 0.2rem;
     width: 100%;
@@ -69,6 +78,19 @@ text-decoration: inherit;}
     margin-top: 5%;
     padding-right: 10%;
 
+}
+.livescore{
+    display: flex;
+    justify-content: center;
+    padding: 15px 30px;
+    border-radius: 6px;
+    border: none;
+    font-size: 30px;
+    background: #4a5edd;
+    box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1),
+      inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.5),
+      0px 0px 0px 0.5px rgba(0, 0, 0, 0.12);
+    color: #dfdedf
 }
 .form-input:focus{
     transition: 0.2s;
@@ -103,10 +125,13 @@ form{
     font-size: 10px;
 
   }
-  
-  .btn {
+  .container{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .container>*{
+
     align-items: center;
     padding: 15px 30px;
     border-radius: 6px;
